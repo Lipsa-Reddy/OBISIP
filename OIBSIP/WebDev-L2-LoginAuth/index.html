@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Authentication System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="auth-container">
+    <!-- Registration Card -->
+    <div id="register-card" class="card">
+      <h2>Register</h2>
+      <div id="reg-error" class="error-msg"></div>
+      <form id="reg-form">
+        <input type="text" id="reg-username" placeholder="Username / Email" required>
+        <input type="password" id="reg-password" placeholder="Password (min 8 chars, 1 number)" required>
+        <button type="submit">Register</button>
+      </form>
+      <p class="switch-text">Already have an account? <a href="#" id="to-login">Login here</a></p>
+    </div>
+
+    <!-- Login Card -->
+    <div id="login-card" class="card hidden">
+      <h2>Login</h2>
+      <div id="login-error" class="error-msg"></div>
+      <form id="login-form">
+        <input type="text" id="login-username" placeholder="Username / Email" required>
+        <input type="password" id="login-password" placeholder="Password" required>
+        <button type="submit">Login</button>
+      </form>
+      <p class="switch-text">Need an account? <a href="#" id="to-reg">Register here</a></p>
+    </div>
+
+    <!-- Dashboard Card -->
+    <div id="dashboard-card" class="card hidden">
+      <h2>Welcome, <span id="user-display"></span>!</h2>
+      <p>This is a protected dashboard page accessible only after authentication.</p>
+      <button id="logout-btn" class="logout">Logout</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
